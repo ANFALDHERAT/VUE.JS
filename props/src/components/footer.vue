@@ -8,6 +8,8 @@
 
 <script>
 
+import{bus} from '../main';
+
 export default {
   props:{
 title:{
@@ -20,6 +22,12 @@ data(){
   return {
     copyright:'anfal1998'
   }
+},
+created()
+{
+  bus.$on('changetitle',(data)=>{
+    this.title=data;
+  })
 }
 }
 </script>

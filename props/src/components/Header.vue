@@ -8,7 +8,7 @@
 <script>
 
 
-
+import{bus} from '../main';
 
 export default {
 props:{
@@ -26,7 +26,9 @@ data(){
 methods:{
   changetitle:function()
   {
-this.title="view result";
+// this.$emit('changetitle','vue wizards')
+this.title='vue';
+bus.$emit('changetitle','vue wizards');
   }
 
 }

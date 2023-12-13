@@ -1,7 +1,7 @@
 <template>
   <div >
 
-<app-header v-bind:title="title"></app-header>
+<app-header v-bind:title="title" v-on:changetitle="updatetitle($event)"></app-header>
 <app-anfal v-bind:anfals="anfals"></app-anfal>
 <!-- <hr>
 <app-anfal v-bind:anfals="anfals"></app-anfal> -->
@@ -34,6 +34,11 @@ data(){
     {name:'anfa',age:'20',show:false},
    ],
    title:"anfal dherat"
+  }
+},
+methods:{
+  updatetitle:function (params) {
+this.title=params;
   }
 }
 
