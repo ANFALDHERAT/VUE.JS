@@ -4,6 +4,7 @@
   <ul>
     <li v-for="anfal in anfals" v-on:click="anfal.show= !anfal.show">   <h1>{{ anfal.name }}</h1> </li>
   </ul>
+  <button v-on:click="deleteAnfal">Delete</button>
 </div>
 </template>
 
@@ -23,14 +24,15 @@ anfals:{
   return {
 
   }
+
 },
-// methods:{
-//   test:function(){
-//     this.anfals
-//   }
+methods:{
+  deleteAnfal:function(){
+this.anfals.pop();
+  }
 
 
-// }
+}
 
 }
 </script>

@@ -1,9 +1,11 @@
 <template>
   <div >
 
-<app-header>    </app-header>
+<app-header v-bind:title="title"></app-header>
 <app-anfal v-bind:anfals="anfals"></app-anfal>
-<app-footer>    </app-footer>
+<!-- <hr>
+<app-anfal v-bind:anfals="anfals"></app-anfal> -->
+<app-footer v-bind:title="title">    </app-footer>
   </div>
 </template>
 
@@ -30,9 +32,11 @@ data(){
     {name:'an',age:'20',show:false},
     {name:'a',age:'20',show:false},
     {name:'anfa',age:'20',show:false},
-   ]
+   ],
+   title:"anfal dherat"
   }
 }
+
 
 }
 </script>

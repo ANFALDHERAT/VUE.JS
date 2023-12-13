@@ -1,6 +1,6 @@
 <template>
   <header>
-<h1>{{title}}</h1>
+<h1 v-on:click="changetitle">{{title}}</h1>
 
   </header>
 </template>
@@ -11,12 +11,24 @@
 
 
 export default {
+props:{
+title:{
+  type:String
 
+}
+},
 
 data(){
   return {
     title:"anfal"
   }
+},
+methods:{
+  changetitle:function()
+  {
+this.title="view result";
+  }
+
 }
 }
 </script>
