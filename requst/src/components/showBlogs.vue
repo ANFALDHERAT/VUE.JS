@@ -39,6 +39,19 @@ computed:{
     return this.blogs.filter((blog)=>{
       return blog.title.match(this.search);
     })
+  },
+  filters:{
+    toUppercase(value){
+      return value.toUpperCase();
+
+    }
+  },
+  directive:{
+    'rainbow':{
+      bind(el,binding,vnode){
+el.style.color="red";
+  }
+    }
   }
 }
 

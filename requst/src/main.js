@@ -11,11 +11,13 @@ Vue.use(VueResource);
 
 
 //custom directives
-Vue.directive('rainbow',{
-  bind(el,binding,vnode){
-el.style.color="red";
-  }
-});
+
+
+// Vue.directive('rainbow',{
+//   bind(el,binding,vnode){
+// el.style.color="red";
+//   }
+// });
 
 Vue.directive('theme',{
   bind(el,binding,vnode){
@@ -29,9 +31,9 @@ Vue.directive('theme',{
 
 //filters
 
-Vue.filter('to-uppercase',function(value){
-return value.toUpperCase();
-});
+// Vue.filter('to-uppercase',function(value){
+// return value.toUpperCase();
+// });
 
 Vue.filter('snippet',function(value){
   return value.slice(0,100)+'...';
